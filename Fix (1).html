@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Wedding Invitation | Kariyah & Targani</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --gold:#c5a059;
+    --bg:#fcfbf9;
+    --text:#2d2d2d;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* ================================================= */
+/* GLOBAL */
+/* ================================================= */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+h1,h2,h3{
+    font-family:'Playfair Display',serif;
+}
+
+.section{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px 16px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    opacity:0;
+
+    transition:
+    1s ease;
+
+}
+
+.section.right{
+    transform:translateX(120px);
+}
+
+.section.left{
+    transform:translateX(-120px);
+}
+
+.section.show{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.divider{
+
+    width:70px;
+    height:1px;
+
+    background:var(--gold);
+
+    margin:20px auto;
+
+}
+
+.content-box{
+
+    width:100%;
+    max-width:430px;
+
+    background:
+    rgba(255,255,255,.82);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:30px;
+
+    padding:32px 24px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/* ================================================= */
+/* OPENING */
+/* ================================================= */
+
+#opening{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    background:
+    url('bgopen.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    transition:
+    1.4s ease;
+
+}
+
+#opening.hide{
+
+    opacity:0;
+
+    transform:
+    scale(1.15);
+
+    visibility:hidden;
+
+}
+
+/* ORNAMENT */
+
+.opening-ornament{
+
+    position:absolute;
+
+    width:120px;
+
+    opacity:.95;
+
+}
+
+.top-right{
+
+    top:0;
+    right:0;
+
+}
+
+.bottom-left{
+
+    bottom:0;
+    left:0;
+
+    transform:
+    rotate(180deg);
+
+}
+
+/* CONTENT */
+
+.opening-content{
+
+    text-align:center;
+
+    color:white;
+
+    z-index:2;
+
+    animation:
+    fadeZoom 2s ease;
+
+}
+
+@keyframes fadeZoom{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        scale(1.3);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        scale(1);
+
+    }
+
+}
+
+/* TITLE */
+
+.opening-subtitle{
+
+    letter-spacing:5px;
+
+    font-size:13px;
+
+    margin-bottom:25px;
+
+}
+
+/* NAME */
+
+.name-wrap{
+
+    animation:
+    nameUp 2s ease;
+
+}
+
+@keyframes nameUp{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        translateY(120px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+.opening-name{
+
+    font-size:60px;
+
+    line-height:1.1;
+
+    font-family:
+    'Playfair Display',serif;
+
+}
+
+.and-symbol{
+
+    font-size:46px;
+
+    margin:10px 0;
+
+}
+
+/* LINE */
+
+.opening-line{
+
+    width:90px;
+    height:1px;
+
+    background:white;
+
+    margin:25px auto;
+
+}
+
+/* DATE */
+
+.opening-date{
+
+    letter-spacing:4px;
+
+    font-size:14px;
+
+}
+
+/* BUTTON */
+
+.btn-open{
+
+    margin-top:35px;
+
+    border:none;
+
+    background:white;
+
+    color:#2d2d2d;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+.btn-open:hover{
+
+    transform:
+    translateY(-4px);
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .opening-name{
+        font-size:52px;
+    }
+
+    .opening-ornament{
+        width:95px;
+    }
+
+}
+
+/* ================================================= */
+/* ORNAMENT */
+/* ================================================= */
+
+.ornament{
+
+    position:absolute;
+
+    opacity:.9;
+
+    animation:
+    floating 4s ease-in-out infinite;
+
+}
+
+.ornament1{
+    top:20px;
+    left:20px;
+    width:90px;
+}
+
+.ornament2{
+    top:20px;
+    right:20px;
+    width:90px;
+    transform:scaleX(-1);
+}
+
+.ornament3{
+    bottom:10px;
+    left:50%;
+    width:140px;
+    transform:translateX(-50%);
+}
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+/* ================================================= */
+/* GALLERY */
+/* ================================================= */
+
+.gallery-box{
+    overflow:hidden;
+}
+
+.gallery-text{
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+    color:#777;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:14px;
+
+    margin-top:25px;
+
+}
+
+.gallery-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    background:white;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s ease;
+
+}
+
+.gallery-card:hover{
+
+    transform:
+    translateY(-5px);
+
+}
+
+.gallery-card img{
+
+    width:100%;
+
+    height:170px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s ease;
+
+}
+
+.gallery-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* LIKE BUTTON */
+
+.like-btn{
+
+    position:absolute;
+
+    top:10px;
+    right:10px;
+
+    width:38px;
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.95);
+
+    color:#c0392b;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.like-btn.active{
+
+    background:#ffebee;
+
+    color:#e53935;
+
+    transform:scale(1.1);
+
+}
+
+.like-btn:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+    .gallery-grid{
+        gap:12px;
+    }
+
+    .gallery-card img{
+        height:145px;
+    }
+
+}
+
+/* ================================================= */
+/* BUTTON */
+/* ================================================= */
+
+.btn{
+
+    border:none;
+
+    background:var(--gold);
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    margin-top:18px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    transform:
+    translateY(-3px);
+
+}
+
+/* ================================================= */
+/* PHOTO */
+/* ================================================= */
+
+.photo-frame{
+
+    width:170px;
+    height:210px;
+
+    margin:24px auto;
+
+    border-radius:
+    90px 90px 24px 24px;
+
+    background-size:cover;
+    background-position:center;
+
+    border:4px solid white;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.1);
+
+}
+
+/* ================================================= */
+/* TIMELINE */
+/* ================================================= */
+
+.timeline{
+
+    position:relative;
+
+    text-align:left;
+
+    margin-top:25px;
+
+}
+
+.timeline::before{
+
+    content:'';
+
+    position:absolute;
+
+    left:7px;
+    top:0;
+
+    width:2px;
+    height:100%;
+
+    background:var(--gold);
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    padding-left:28px;
+
+    margin-bottom:22px;
+
+}
+
+.timeline-item::before{
+
+    content:'';
+
+    position:absolute;
+
+    left:1px;
+    top:5px;
+
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+}
+
+/* ================================================= */
+/* COUNTDOWN */
+/* ================================================= */
+
+.countdown{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:25px;
+
+}
+
+.count-box{
+
+    background:#faf6ef;
+
+    border-radius:20px;
+
+    padding:20px 10px;
+
+}
+
+.count-box h2{
+
+    color:var(--gold);
+
+    font-size:28px;
+
+}
+
+/* ================================================= */
+/* GALLERY */
+/* ================================================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+.gallery div{
+
+    height:110px;
+
+    border-radius:18px;
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+/* ================================================= */
+/* EVENT */
+/* ================================================= */
+
+.event-box{
+
+    margin-top:18px;
+
+    background:#faf6ef;
+
+    padding:20px;
+
+    border-radius:20px;
+
+}
+
+/* ================================================= */
+/* FORM */
+/* ================================================= */
+
+.input{
+
+    width:100%;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    margin-top:12px;
+
+    background:#f5f5f5;
+
+    font-family:'Montserrat';
+
+}
+
+/* ================================================= */
+/* MUSIC */
+/* ================================================= */
+
+.music-btn{
+
+    position:fixed;
+
+    bottom:20px;
+    right:20px;
+
+    width:58px;
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:white;
+
+    font-size:20px;
+
+    z-index:999;
+
+    cursor:pointer;
+
+    animation:
+    spin 5s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ================================================= */
+/* FOOTER */
+/* ================================================= */
+
+footer{
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    background:#f8f4ee;
+
+}
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+
+@media(max-width:600px){
+
+    .section{
+        padding:60px 14px;
+    }
+
+    .content-box{
+
+        max-width:100%;
+
+        padding:26px 18px;
+
+        border-radius:24px;
+
+    }
+
+    h1{
+        font-size:40px !important;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    p{
+        font-size:14px;
+    }
+
+    .photo-frame{
+        width:145px;
+        height:185px;
+    }
+
+    .gallery div{
+        height:95px;
+    }
+
+    .count-box h2{
+        font-size:24px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- SAMPUL -->
+<!-- ================================================= -->
+
+<section id="opening">
+
+    <!-- ORNAMENT -->
+    <img src="ornamentataskanan.png"
+    class="opening-ornament top-right">
+
+    <img src="ornamentbawahkiri.png"
+    class="opening-ornament bottom-left">
+
+    <!-- CONTENT -->
+    <div class="opening-content">
+
+        <p class="opening-subtitle">
+            THE WEDDING OF
+        </p>
+
+        <!-- NAMA -->
+        <div class="name-wrap">
+
+            <h1 class="opening-name">
+                Kariyah
+            </h1>
+
+            <div class="and-symbol">
+                &
+            </div>
+
+            <h1 class="opening-name">
+                Targani
+            </h1>
+
+        </div>
+
+        <div class="opening-line"></div>
+
+        <p class="opening-date">
+            26 MARET 2026
+        </p>
+
+        <button class="btn-open"
+        onclick="openInvitation()">
+            BUKA UNDANGAN
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- MEMPELAI -->
+<!-- ================================================= -->
+
+<section class="section right">
+
+<div class="content-box">
+
+    <span style="font-size:28px;">﷽</span>
+
+    <h2 style="margin-top:15px;">
+        Kariyah & Targani
+    </h2>
+
+    <div class="divider"></div>
+
+    <p>
+        Dengan memohon rahmat dan ridho Allah SWT,
+        kami bermaksud mengundang
+        Bapak/Ibu/Saudara/i untuk hadir
+        dalam acara pernikahan kami.
+    </p>
+
+    <div class="photo-frame"
+    style="
+    background-image:
+    url('mempelaiwanita.jpg');
+    ">
+    </div>
+
+    <h2 style="color:var(--gold);">
+        Kariyah
+    </h2>
+
+    <p>
+        Putri dari Bapak Ahmad
+        & Ibu Siti Aminah
+    </p>
+
+    <div style="
+    font-size:42px;
+    margin:22px 0;
+    color:var(--gold);
+    ">
+        &
+    </div>
+
+    <div class="photo-frame"
+    style="
+    background-image:
+    url('mempelaipria.jpg');
+    ">
+    </div>
+
+    <h2 style="color:var(--gold);">
+        Targani
+    </h2>
+
+    <p>
+        Putra dari Bapak Rahmat
+        & Ibu Nurhayati
+    </p>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- LOVE STORY -->
+<!-- ================================================= -->
+
+<section class="section left">
+
+<div class="content-box">
+
+    <h2>Perjalanan Cinta</h2>
+
+    <div class="divider"></div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <b>2023</b>
+            <p>Awal pertama kali bertemu.</p>
+        </div>
+
+        <div class="timeline-item">
+            <b>2024</b>
+            <p>Mulai saling mengenal lebih dekat.</p>
+        </div>
+
+        <div class="timeline-item">
+            <b>2025</b>
+            <p>Memutuskan untuk bertunangan.</p>
+        </div>
+
+        <div class="timeline-item">
+            <b>2026</b>
+            <p>Melangsungkan akad pernikahan.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- COUNTDOWN -->
+<!-- ================================================= -->
+
+<section class="section right">
+
+<div class="content-box">
+
+    <h2>Menuju Hari Bahagia</h2>
+
+    <div class="divider"></div>
+
+    <div class="countdown">
+
+        <div class="count-box">
+            <h2 id="days">00</h2>
+            <p>Hari</p>
+        </div>
+
+        <div class="count-box">
+            <h2 id="hours">00</h2>
+            <p>Jam</p>
+        </div>
+
+        <div class="count-box">
+            <h2 id="minutes">00</h2>
+            <p>Menit</p>
+        </div>
+
+        <div class="count-box">
+            <h2 id="seconds">00</h2>
+            <p>Detik</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- EVENT -->
+<!-- ================================================= -->
+
+<section class="section left">
+
+<div class="content-box">
+
+    <h2>Detail Acara</h2>
+
+    <div class="divider"></div>
+
+    <div class="event-box">
+
+        <h3>Akad Nikah</h3>
+
+        <p style="margin-top:10px;">
+            Kamis, 26 Maret 2026
+        </p>
+
+        <p>
+            08.00 WIB
+        </p>
+
+    </div>
+
+    <div class="event-box">
+
+        <h3>Resepsi</h3>
+
+        <p style="margin-top:10px;">
+            Kamis, 26 Maret 2026
+        </p>
+
+        <p>
+            11.00 WIB - Selesai
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- GALLERY SECTION -->
+<!-- ================================================= -->
+
+<section class="section left">
+
+<div class="content-box gallery-box">
+
+    <h2>Galeri Kenangan</h2>
+
+    <div class="divider"></div>
+
+    <p class="gallery-text">
+        Setiap momen bersama adalah
+        kenangan yang tak terlupakan.
+    </p>
+
+    <div class="gallery-grid">
+
+        <!-- ITEM 1 -->
+        <div class="gallery-card">
+
+            <img src="g1.jpg">
+
+            <button class="like-btn"
+            onclick="toggleLike(this)">
+                ♡
+            </button>
+
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="gallery-card">
+
+            <img src="g2.jpg">
+
+            <button class="like-btn"
+            onclick="toggleLike(this)">
+                ♡
+            </button>
+
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="gallery-card">
+
+            <img src="g3.jpg">
+
+            <button class="like-btn"
+            onclick="toggleLike(this)">
+                ♡
+            </button>
+
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="gallery-card">
+
+            <img src="g4.jpg">
+
+            <button class="like-btn"
+            onclick="toggleLike(this)">
+                ♡
+            </button>
+
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="gallery-card">
+
+            <img src="g5.jpg">
+
+            <button class="like-btn"
+            onclick="toggleLike(this)">
+                ♡
+            </button>
+
+        </div>
+
+        <!-- ITEM 6 -->
+        <div class="gallery-card">
+
+            <img src="g6.jpg">
+
+            <button class="like-btn"
+            onclick="toggleLike(this)">
+                ♡
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- LOKASI -->
+<!-- ================================================= -->
+
+<section class="section left">
+
+<div class="content-box">
+
+    <h2>Lokasi Acara</h2>
+
+    <div class="divider"></div>
+
+    <p>
+        Gedung Serbaguna Bahagia
+    </p>
+
+    <p style="
+    margin-top:10px;
+    ">
+        Jl. Bahagia No.12,
+        Bekasi, Jawa Barat
+    </p>
+
+    <button class="btn">
+        LIHAT GOOGLE MAPS
+    </button>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- AMPLOP -->
+<!-- ================================================= -->
+
+<section class="section right">
+
+<div class="content-box">
+
+    <h2>Amplop Digital</h2>
+
+    <div class="divider"></div>
+
+    <p>
+        Doa restu Anda adalah hadiah
+        terindah bagi kami.
+    </p>
+
+    <div class="event-box"
+    style="text-align:left;">
+
+        <p>BANK BCA</p>
+
+        <h2 style="
+        margin:10px 0;
+        color:var(--gold);
+        ">
+            1234567890
+        </h2>
+
+        <p>a.n Kariyah</p>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- RSVP -->
+<!-- ================================================= -->
+
+<section class="section left">
+
+<div class="content-box">
+
+    <h2>Ucapan & Doa</h2>
+
+    <div class="divider"></div>
+
+    <input
+    type="text"
+    class="input"
+    placeholder="Nama Anda">
+
+    <textarea
+    rows="4"
+    class="input"
+    placeholder="Tulis doa & ucapan..."></textarea>
+
+    <button class="btn">
+        Kirim Ucapan
+    </button>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- FOOTER -->
+<!-- ================================================= -->
+
+<footer>
+
+    <p style="
+    font-size:13px;
+    letter-spacing:2px;
+    color:#888;
+    ">
+        WEDDING INVITATION
+    </p>
+
+    <h2 style="
+    margin-top:10px;
+    color:var(--gold);
+    ">
+        Kariyah & Targani
+    </h2>
+
+</footer>
+
+<!-- ================================================= -->
+<!-- MUSIC -->
+<!-- ================================================= -->
+
+<audio id="music" loop>
+    <source src="backsound.mp3" type="audio/mp3">
+</audio>
+
+<button class="music-btn"
+onclick="toggleMusic()">
+♫
+</button>
+
+<!-- ================================================= -->
+<!-- SCRIPT -->
+<!-- ================================================= -->
+
+<script>
+
+/* OPEN INVITATION */
+
+function openInvitation(){
+
+    document
+    .getElementById('opening')
+    .classList.add('hide');
+
+    document
+    .getElementById('music')
+    .play();
+
+}
+<!-- ================================================= -->
+<!-- SCRIPT LIKE -->
+<!-- ================================================= -->
+
+
+function toggleLike(button){
+
+    button.classList.toggle('active');
+
+    if(button.classList.contains('active')){
+
+        button.innerHTML = '❤';
+
+    }else{
+
+        button.innerHTML = '♡';
+
+    }
+
+}
+
+
+/* ================================================= */
+/* SCROLL ANIMATION */
+/* ================================================= */
+
+const sections =
+document.querySelectorAll('.section');
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add('show');
+
+        }
+
+    });
+
+},{
+    threshold:0.15
+});
+
+sections.forEach(section=>{
+
+    observer.observe(section);
+
+});
+
+/* ================================================= */
+/* COUNTDOWN */
+/* ================================================= */
+
+const target =
+new Date("March 26, 2026 00:00:00")
+.getTime();
+
+setInterval(()=>{
+
+    const now =
+    new Date().getTime();
+
+    const diff =
+    target - now;
+
+    const d =
+    Math.floor(
+    diff / (1000*60*60*24));
+
+    const h =
+    Math.floor(
+    (diff % (1000*60*60*24))
+    / (1000*60*60));
+
+    const m =
+    Math.floor(
+    (diff % (1000*60*60))
+    / (1000*60));
+
+    const s =
+    Math.floor(
+    (diff % (1000*60))
+    / 1000);
+
+    document.getElementById('days').innerHTML = d;
+    document.getElementById('hours').innerHTML = h;
+    document.getElementById('minutes').innerHTML = m;
+    document.getElementById('seconds').innerHTML = s;
+
+},1000);
+
+/* ================================================= */
+/* MUSIC */
+/* ================================================= */
+
+const music =
+document.getElementById('music');
+
+function toggleMusic(){
+
+    if(music.paused){
+
+        music.play();
+
+    }else{
+
+        music.pause();
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
